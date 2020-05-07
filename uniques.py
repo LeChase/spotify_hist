@@ -73,10 +73,10 @@ class Unique:
             for artist, songs in d.items():
                 for song in songs.keys():
                     i += 1
-                    percent_done = round(i/n_songs, 3)
+                    percent_done = round(100*i/n_songs, 3)
                     dt = round(time.time() - time0, 2)
                     time_remaining = round(dt/i*(n_songs-i))
-                    print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(dt, datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
+                    print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(datetime.timedelta(seconds = dt), datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
                     d[artist][song] = self.find_lyrics(artist, song)
                     with open(json_file, 'w') as f_write:
                         json.dump(d, f_write)
