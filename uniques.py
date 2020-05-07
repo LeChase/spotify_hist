@@ -8,8 +8,16 @@ import json
 
 import collections
 
+import lyricsgenius
 
 __scrobbles__ = 'downloads/gps56-2.csv'
+
+__key__ = "UgvKlj9wHavgvBZScdTzfIKL2DKiIatIwPVV0M6JpEqm8YgIC_eJiQsYcsnmU2G-"
+
+genius = lyricsgenius.Genius(__key__, timeout = 60, sleep_time = 0)
+genius.verbose = True
+
+
 
 
 class Unique:
@@ -47,7 +55,21 @@ class Unique:
         d = {item['artist']: item['songs'] for item in d}
         return d
 
+    def return_uniques(self, uniques_json):
+        with open(uniques_json) as f:
+            uniques_dict = json.load(f)
+        return uniques_dict
 
+
+    @staticmethod
+    def get_lyrics(artist, song):
+        try:
+            song = genius.search_song(' - '.join((artist, song)))
+            return song.lyrics
+        except (AttributeError, TypeError):
+            return 'NOT FOUND - AttributeError'
+        except TypeError:
+            return 'NOT FOUND - TypeError'
 
 
     @staticmethod
