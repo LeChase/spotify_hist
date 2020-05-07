@@ -3,6 +3,8 @@ Identifying unique songs by artist
 """
 import os
 
+import time, datetime
+
 import pandas as pd 
 import json
 
@@ -15,7 +17,7 @@ __scrobbles__ = 'downloads/gps56-2.csv'
 __key__ = "UgvKlj9wHavgvBZScdTzfIKL2DKiIatIwPVV0M6JpEqm8YgIC_eJiQsYcsnmU2G-"
 
 genius = lyricsgenius.Genius(__key__, timeout = 60, sleep_time = 0)
-genius.verbose = True
+genius.verbose = False
 
 
 
@@ -62,8 +64,27 @@ class Unique:
         return uniques_dict
 
 
+    def fill_lyrics(self, json_file):
+        with open(json_file) as f_read:
+            d = json.load(f_read)
+            n_songs = len(self.flatten_dict(d))
+            time0 = time.time()
+            i = 0
+            for artist, songs in d.items():
+                for song in songs.keys():
+                    i += 1
+                    percent_done = round(i/n_songs, 3)
+                    dt = round(time.time() - time0, 2)
+                    time_remaining = round(dt/i*(n_songs-i))
+                    print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(dt, datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
+                    d[artist][song] = self.find_lyrics(artist, song)
+                    with open(json_file, 'w') as f_write:
+                        json.dump(d, f_write)
+        
+
+
     @staticmethod
-    def get_lyrics(artist, song):
+    def find_lyrics(artist, song):
         try:
             song = genius.search_song(' - '.join((artist, song)))
             return song.lyrics
@@ -96,6 +117,8 @@ class Unique:
     def dict_diff(dict_new, dict_old):
         # returns the items present in dict_new that are NOT present in dict_old
         return Unique.unflatten_dict(set(Unique.flatten_dict(dict_new)) - set(Unique.flatten_dict(dict_old)))
+
+
 
 
 
