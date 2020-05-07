@@ -53,6 +53,7 @@ class Unique:
         collected = uniques_df.groupby('artist')['song'].apply(list).reset_index(name = 'songs')
         d = collected.to_dict('records')
         d = {item['artist']: item['songs'] for item in d}
+        d = {artist: {song: '' for song in songs} for artist, songs in d.items()}
         return d
 
     def return_uniques(self, uniques_json):
@@ -74,16 +75,16 @@ class Unique:
 
     @staticmethod
     def flatten_dict(d):
-        # ungroups keys
-        return [(key, value) for key, values in d.items() for value in values]
+        # ungroups keys in nested dict
+        return [(artist, song, lyrics) for artist, songs in d.items() for song, lyrics in songs.items()]
 
 
     @staticmethod
     def unflatten_dict(list_tups):
         # groups keys
-        d = collections.defaultdict(list)
-        for key, val in list_tups:
-            d[key].append(val)
+        d = collections.defaultdict(dict)
+        for artist, song, lyrics in list_tups:
+            d[artist][song] = lyrics
         return dict(d)
 
     @staticmethod
