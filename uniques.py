@@ -12,6 +12,8 @@ import collections
 
 import lyricsgenius
 
+import spotify
+
 __scrobbles__ = 'downloads/gps56-2.csv'
 
 __key__ = "UgvKlj9wHavgvBZScdTzfIKL2DKiIatIwPVV0M6JpEqm8YgIC_eJiQsYcsnmU2G-"
@@ -65,21 +67,48 @@ class Unique:
 
 
     def fill_lyrics(self, json_file):
-        with open(json_file) as f_read:
-            d = json.load(f_read)
-            n_songs = len(self.flatten_dict(d))
-            time0 = time.time()
-            i = 0
-            for artist, songs in d.items():
-                for song in songs.keys():
-                    i += 1
-                    percent_done = round(100*i/n_songs, 3)
-                    dt = round(time.time() - time0, 2)
-                    time_remaining = round(dt/i*(n_songs-i))
-                    print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(datetime.timedelta(seconds = dt), datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
-                    d[artist][song] = self.find_lyrics(artist, song)
-                    with open(json_file, 'w') as f_write:
+        if os.path.isfile(json_file):
+            # file already exists, assume that we want to fill in missing lyrics 
+            with open(json_file) as f_read:
+
+
+        else:
+            # start anew 
+            with open(json_file) as f_read:
+                d = json.load(f_read)
+                n_songs = len(self.flatten_dict(d))
+                time0 = time.time()
+                i = 0
+                for artist, songs in d.items():
+                    for song in songs.keys():
+                        i += 1
+                        percent_done = round(100*i/n_songs, 3)
+                        dt = round(time.time() - time0)
+                        time_remaining = round(dt/i*(n_songs-i))
+                        print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(datetime.timedelta(seconds = dt), datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
+                        d[artist][song] = self.find_lyrics(artist, song)
+                        with open(json_file, 'w') as f_write:
+                            json.dump(d, f_write)
+
+
+    def fill_spotify_features_init(self, json_file):
+        d = self.collect_uniques()
+        n_songs = len(self.flatten_dict(d))
+        time0 = time.time()
+        i = 0
+        for artist, songs in d.items():
+            for song in songs.keys():
+                i += 1
+                percent_done = round(100*i/n_songs, 3)
+                dt = round(time.time() - time0)
+                time_remaining = round(dt/i*(n_songs-i))
+                print('[[{} / {} ({}%)]]'.format(i, n_songs, percent_done), '[[{}s elapsed ({}s remaining)]]'.format(datetime.timedelta(seconds = dt), datetime.timedelta(seconds = time_remaining)), artist, '--', song,)
+                
+                features = spotify.Spotify.get_features(artist, song)
+                d[artist][song] = features
+                with open(json_file, 'w') as f_write:
                         json.dump(d, f_write)
+
         
 
 
@@ -110,6 +139,8 @@ class Unique:
 
     @staticmethod
     def merge_dicts(dict1, dict2):
+        # overlapping keys are given priority to dict2 
+        # i.e. given dict1[x] = a and dict2[x] = b, dict_merged[x] = b
         return {**dict1, **dict2}
 
 
