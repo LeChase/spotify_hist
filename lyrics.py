@@ -16,13 +16,15 @@ genius.verbose = False
 
 class Lyrics:
 
-    @staticmethod
-    def find_lyrics(artist, song):
+    failed_result = 'FAILED'
+
+    @classmethod
+    def find_lyrics(cls, artist, song):
         try:
             song = genius.search_song(' - '.join((artist, song)))
             return song.lyrics
         except (AttributeError, TypeError):
-            return 'FAILED'
+            return cls.failed_result
 
 
 

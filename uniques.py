@@ -49,6 +49,14 @@ class Unique:
         with open(uniques_json, 'w') as f:
                 json.dump(total_uniques, f)
 
+    @staticmethod
+    def get_uniques():
+        # returns a set of tuples containing artist, song combinations
+        scrobbles_df = pd.read_csv(__scrobbles__, header = None, names = ['artist', 'album', 'song', 'datetime'])
+        uniques_df = scrobbles_df.drop_duplicates(['artist', 'song'])[['artist', 'song']]
+        return set(pd.MultiIndex.from_frame(uniques_df))
+
+
 
     def collect_uniques(self):
         # given scrobbles, collect unique artist/song combos in dict
@@ -70,7 +78,7 @@ class Unique:
         if os.path.isfile(json_file):
             # file already exists, assume that we want to fill in missing lyrics 
             with open(json_file) as f_read:
-
+                pass
 
         else:
             # start anew 

@@ -17,14 +17,16 @@ sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 
 class Spotify:
 
-    @staticmethod
-    def get_track_id(artist, song):
+    failed_result = 'FAILED'
+
+    @classmethod
+    def get_track_id(cls, artist, song):
         try:
             result = sp.search(q = 'artist: {} track: {}'.format(artist, song),  type = 'track')
             return result['tracks']['items'][0]['id']
         except IndexError:
             # cannot find track
-            return ''
+            return cls.failed_result
 
     @staticmethod
     def get_features(artist, song):

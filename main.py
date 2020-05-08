@@ -5,16 +5,21 @@ main script
 
 import uniques
 
+from scraper import Scraper
 
-__json_path__ = "output\unique.json"
+from lyrics import Lyrics
+from spotify import Spotify
+
+
+# __json_path__ = "output/unique.json"
+__json_path__ = "output/unique_spotify.json"
+
 
 def main():
 
-    test = uniques.Unique()
+    # Scraper.main('lyrics', Lyrics.find_lyrics)
 
-    test.update_json(__json_path__)
-
-    test.fill_lyrics(__json_path__)
+    Scraper.main('spotify', Spotify.get_features)
 
 
 
