@@ -6,18 +6,18 @@ uses Spotify API via spotipy wrapper
 
 import os
 
-from engine import Engine
+from scraping import engine, keys
 
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
 
-class Spotify(Engine):
+class Spotify(engine.Engine):
 
     # setting env var in python
-    os.environ['SPOTIPY_CLIENT_ID'] = '68be2578e21e439a92f5fcc00f9cfb6a'
-    os.environ['SPOTIPY_CLIENT_SECRET'] = '45c1b5c64c8e4cbebc3d37c963e04bf9'
+    os.environ['SPOTIPY_CLIENT_ID'] = keys._SPOTIPY_CLIENT_ID
+    os.environ['SPOTIPY_CLIENT_SECRET'] = keys._SPOTIPY_CLIENT_SECRET
 
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
 

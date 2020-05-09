@@ -4,16 +4,15 @@ methods for pulling lyrics from Genius
 uses Genius API
 """
 
-from engine import Engine
+from scraping import engine, keys
 
 import lyricsgenius
 
 
 
-class Lyrics(Engine):
+class Lyrics(engine.Engine):
 
-    _geinus_key = "UgvKlj9wHavgvBZScdTzfIKL2DKiIatIwPVV0M6JpEqm8YgIC_eJiQsYcsnmU2G-"
-    genius = lyricsgenius.Genius(_geinus_key, timeout = 60, sleep_time = 0)
+    genius = lyricsgenius.Genius(keys._genius_key, timeout = 60, sleep_time = 0)
     genius.verbose = False
 
     @classmethod

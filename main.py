@@ -3,19 +3,22 @@ main script
 
 """
 
-from scraper import Scraper
+from scraping.scraper import Scraper
 
-from lyrics import Lyrics
-from spotify import Spotify
+from scraping.lyrics import Lyrics
+from scraping.spotify import Spotify
 
 
 
 def main():
 
-    # Scraper.main('lyrics', Lyrics.find_lyrics)
+    # get lyrics
+    lyric_scraper = Scraper('lyrics', Lyrics, Lyrics.find_lyrics)
+    lyric_scraper.main()
 
-    Scraper.main('spotify', Spotify.get_features)
-
+    # get spotify features 
+    spotify_scraper = Scraper('spotify', Spotify, Spotify.get_features)
+    spotify_scraper.main()
 
 
 
