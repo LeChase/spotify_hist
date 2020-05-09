@@ -22,6 +22,8 @@ class Scraper:
         self.output_type = output_type
         self.scrape_func = scrape_func
 
+        self.output_path = lambda f_type: "scraping/output/{}/{}.json".format(self.output_type, f_type)
+
     @staticmethod
     def get_from_json(json_path):
         if os.path.isfile(json_path):
@@ -36,9 +38,9 @@ class Scraper:
 
         unique_scrobbles = Unique.get_uniques()
 
-        completed_json = 'output/{}/completed.json'.format(self.output_type)
-        failed_json = 'output/{}/failed.json'.format(self.output_type)
-        yet_json = 'output/{}/yet.json'.format(self.output_type)
+        completed_json = self.output_path('completed')
+        failed_json = self.output_path('failed')
+        yet_json = self.output_path('yet')
 
         completed_df, completed_set = self.get_from_json(completed_json)
         failed_df, failed_set = self.get_from_json(failed_json)
