@@ -11,7 +11,7 @@ import re
 
 stop_words = [item.replace("""'""", '') for item in stopwords.words('english')]
 stop_words.extend(['im', 'like', 'yeah', 'get', 'oh', 'aint', 'got', 'wanna', 'want', 'ooh', 'ay', 'ayy', 'uh', 'cant'])
-stopwords.extend(['intro', 'verse', 'outro', 'verse', 'chorus'])
+stopwords.extend(['intro', 'verse', 'outro', 'verse', 'chorus', 'hook')
 
 re_compiled = re.compile(r'[^a-zA-Z0-9- ]')
 

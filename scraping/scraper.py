@@ -8,7 +8,7 @@ import pandas as pd, numpy as np
 
 import time, datetime
 
-from scraping.uniques import Unique
+from analysis.uniques import Unique
 from scraping.lyrics import Lyrics
 from scraping.spotify import Spotify
 
