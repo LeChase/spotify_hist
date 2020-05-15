@@ -49,6 +49,7 @@ class Spotify(engine.Engine):
         top_50_features = [cls.sp.audio_features(URI)[0] for URI in top_50_tracks]
         df_features = pd.DataFrame(top_50_features)
         df_features.to_json('scraping/output/top_50/features.json', orient = 'table')
+        return df_features
 
 
 
