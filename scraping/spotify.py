@@ -6,6 +6,8 @@ uses Spotify API via spotipy wrapper
 
 import os
 
+import pandas as pd
+
 from scraping import engine, keys
 
 import spotipy
@@ -38,6 +40,15 @@ class Spotify(engine.Engine):
         # not sure why, but i have to return this in order for scraper to be able to put into dataframe
         # checking features[0] since sometimes features = [None] if it failed 
         return features if features[0] else cls.failed_result
+
+    @classmethod
+    def get_top50_features(cls):
+        # the playlist URI should be static 
+        top_50_URI = 'spotify:playlist:37i9dQZEVXbLRQDuF5jeBp'
+        top_50_tracks = [item['track']['uri'] for item in cls.sp.playlist_tracks(top_50_URI)['items']]
+        top_50_features = [cls.sp.audio_features(URI)[0] for URI in top_50_tracks]
+        df_features = pd.DataFrame(top_50_features)
+        df_features.to_json('scraping/output/top_50/features.json', orient = 'table')
 
 
 
