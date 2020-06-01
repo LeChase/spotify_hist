@@ -42,10 +42,10 @@ class Spotify(engine.Engine):
         return features if features[0] else cls.failed_result
 
     @classmethod
-    def get_genres(cls, artist):
+    def get_genres(cls, artist, song = ''):
         try:
             result = cls.sp.search(q = 'artist: {}'.format(artist),  type = 'artist')
-            return result['artists']['items'][0]['genres']
+            return result['artists']['items'][0]['genres'][0]
         except IndexError:
             # cannot find track
             return cls.failed_result
