@@ -21,7 +21,7 @@ def main():
     # spotify_scraper.main()
 
     # get genres
-    genre_scraper = Scraper('genre', Spotify, Spotify.get_genres)
+    genre_scraper = Scraper('genres', Spotify, Spotify.get_genres)
     genre_scraper.main_genre()
 
 
