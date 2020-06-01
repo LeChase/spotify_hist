@@ -42,6 +42,15 @@ class Spotify(engine.Engine):
         return features if features[0] else cls.failed_result
 
     @classmethod
+    def get_genres(cls, artist):
+        try:
+            result = cls.sp.search(q = 'artist: {}'.format(artist),  type = 'artist')
+            return result['artists']['items'][0]['genres']
+        except IndexError:
+            # cannot find track
+            return cls.failed_result
+
+    @classmethod
     def get_top50_features(cls):
         # the playlist URI should be static 
         top_50_URI = 'spotify:playlist:37i9dQZEVXbLRQDuF5jeBp'
