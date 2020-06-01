@@ -21,6 +21,13 @@ class Unique:
         uniques_df = scrobbles_df.drop_duplicates(['artist', 'song'])[['artist', 'song']]
         return set(pd.MultiIndex.from_frame(uniques_df))
 
+    @staticmethod
+    def get_unique_artists():
+        # returns set of unique artists from scrobbles 
+        scrobbles_df = pd.read_csv(__scrobbles__, header = None, names = ['artist', 'album', 'song', 'datetime'])
+        uniques_df = scrobbles_df.drop_duplicates(['artist'])['artist']
+        return set(uniques_df)
+
 
     
 
