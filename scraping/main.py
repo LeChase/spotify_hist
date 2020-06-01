@@ -2,6 +2,7 @@
 call this script to run scraping
 """
 
+
 from scraping.scraper import Scraper
 
 from scraping.lyrics import Lyrics
