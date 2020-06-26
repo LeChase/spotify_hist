@@ -13092,7 +13092,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
@@ -13118,7 +13118,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">__scrobbles__</span> <span class="o">=</span> <span class="s1">&#39;downloads/gps56-2.csv&#39;</span>
@@ -13142,7 +13142,7 @@ The date/time column is given in UTC.  Since I've spent the past 3 years living 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13158,14 +13158,14 @@ The date/time column is given in UTC.  Since I've spent the past 3 years living 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>False    55281
-True       277
+<pre>False    59788
+True       298
 Name: datetime, dtype: int64</pre>
 </div>
 
@@ -13177,7 +13177,7 @@ Name: datetime, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remove NaN datetimes</span>
@@ -13191,7 +13191,7 @@ Name: datetime, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">datetime</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">datetime</span><span class="p">,</span> <span class="n">utc</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_convert</span><span class="p">(</span><span class="s1">&#39;US/Eastern&#39;</span><span class="p">)</span>
@@ -13212,7 +13212,7 @@ Name: datetime, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -13228,7 +13228,7 @@ Name: datetime, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13260,73 +13260,73 @@ Name: datetime, dtype: int64</pre>
   <tbody>
     <tr>
       <th>1</th>
-      <td>Drake</td>
-      <td>Dark Lane Demo Tapes</td>
-      <td>Pain 1993 (with Playboi Carti)</td>
-      <td>2020-05-04 20:34:00-04:00</td>
+      <td>Future</td>
+      <td>High Off Life</td>
+      <td>One Of My</td>
+      <td>2020-06-26 00:24:00-04:00</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Empty</td>
-      <td>2020-05-04 18:07:00-04:00</td>
+      <td>Wiz Khalifa</td>
+      <td>O.N.I.F.C. (Deluxe)</td>
+      <td>Stackin</td>
+      <td>2020-06-25 22:50:00-04:00</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Rider</td>
-      <td>2020-05-04 18:05:00-04:00</td>
+      <td>Dreamville</td>
+      <td>Revenge Of The Dreamers III: Director's Cut</td>
+      <td>No Chorus (with Bas feat. Buddy Guapdad 4000 &amp;...</td>
+      <td>2020-06-25 22:47:00-04:00</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Make Believe</td>
-      <td>2020-05-04 18:05:00-04:00</td>
+      <td>Lil Yachty</td>
+      <td>Split/Whole Time</td>
+      <td>Split/Whole Time</td>
+      <td>2020-06-25 22:43:00-04:00</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>She’s The One</td>
-      <td>2020-05-04 17:58:00-04:00</td>
+      <td>Future</td>
+      <td>High Off Life</td>
+      <td>One Of My</td>
+      <td>2020-06-25 22:40:00-04:00</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>10 Feet</td>
-      <td>2020-05-04 17:56:00-04:00</td>
+      <td>Future</td>
+      <td>High Off Life</td>
+      <td>HiTek Tek</td>
+      <td>2020-06-25 22:37:00-04:00</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Ring Ring (with Rvssian feat. Clever)</td>
-      <td>2020-05-04 17:53:00-04:00</td>
+      <td>Future</td>
+      <td>High Off Life</td>
+      <td>Ridin Strikers</td>
+      <td>2020-06-25 22:33:00-04:00</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Maze</td>
-      <td>2020-05-04 17:50:00-04:00</td>
+      <td>Future</td>
+      <td>High Off Life</td>
+      <td>One Of My</td>
+      <td>2020-06-25 22:31:00-04:00</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Empty</td>
-      <td>2020-05-04 17:46:00-04:00</td>
+      <td>Dreamville</td>
+      <td>Revenge Of The Dreamers III: Director's Cut</td>
+      <td>No Chorus (with Bas feat. Buddy Guapdad 4000 &amp;...</td>
+      <td>2020-06-25 22:27:00-04:00</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>Juice WRLD</td>
-      <td>Death Race For Love</td>
-      <td>Make Believe</td>
-      <td>2020-05-04 17:44:00-04:00</td>
+      <td>Lil Yachty</td>
+      <td>Split/Whole Time</td>
+      <td>Split/Whole Time</td>
+      <td>2020-06-25 22:23:00-04:00</td>
     </tr>
   </tbody>
 </table>
@@ -13369,7 +13369,7 @@ Name: datetime, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -13697,7 +13697,7 @@ here's a simple function that takes a <code>pd.Series</code> of integers as its 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_percents</span><span class="p">(</span><span class="n">value_counts</span><span class="p">):</span>
@@ -34023,6 +34023,2927 @@ z
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Genre-Analysis">Genre Analysis<a class="anchor-link" href="#Genre-Analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Another bit of data that Spotify provides is the top genres that can be attributed to each artist.  Using this, I can take a look at trends in my listening pertaining to genre.</p>
+<p>(Spotify doesnt list genres for individual songs or albums, only artists as a whole -- this will yield a less-than-ideal analysis, but still potentially interesting nonetheless)</p>
+<p>Using scraping methods similar to before, I gathered the genre data via Spotify API and saved to json.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in spotify features from scraping json output</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;scraping/output/genres/completed.json&quot;</span><span class="p">,</span> <span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># NOTES HERE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<span class="c1"># why did i scrape based on both artist and song name?  Also i should try to get all the top genres, not just the first one</span>
+<span class="c1"># check for NaN values with genre or other spotify API stuff ... aka things that couldnt be found by spotify search </span>
+<span class="n">genres</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>genres</th>
+    </tr>
+    <tr>
+      <th>artist</th>
+      <th>song</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>!!!</th>
+      <th>Even When the Water's Cold</th>
+      <td>alternative dance</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">$uicideboy$</th>
+      <th>#1 STUNNA</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>2ND HAND</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>AM / PM</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>Champion Of Death</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>vinne</th>
+      <th>By My Side</th>
+      <td>brazilian edm</td>
+    </tr>
+    <tr>
+      <th>walk.</th>
+      <th>seagull.</th>
+      <td>pop</td>
+    </tr>
+    <tr>
+      <th>wasiu</th>
+      <th>Cigarettes &amp; Poutine</th>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>yuzu blur</th>
+      <th>Sky Blush</th>
+      <td>lo-fi beats</td>
+    </tr>
+    <tr>
+      <th>âme</th>
+      <th>No War - Rampa Remix</th>
+      <td>modern rock</td>
+    </tr>
+  </tbody>
+</table>
+<p>6608 rows × 1 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">genres</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="s1">&#39;song&#39;</span><span class="p">],</span> <span class="n">right_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's take a look at the total occurences of the top genres</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>atl hip hop            10058
+canadian hip hop        4787
+hip hop                 4601
+chicago rap             2872
+melodic rap             2707
+conscious hip hop       1822
+dance pop               1655
+rap                     1548
+big room                1392
+edm                     1301
+alternative r&amp;b         1230
+east coast hip hop       807
+alternative hip hop      752
+emo rap                  752
+dark trap                630
+Name: genres, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[71]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>410</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>410 genres is quite a lot, and the genres appear to be a <em>bit</em> specific ... let's group by both artist and genre, and see what artists comprise these top genres</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_groupby_counts</span> <span class="o">=</span> <span class="n">df_genres</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genres&#39;</span><span class="p">,</span> <span class="s1">&#39;artist&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;n_artists&#39;</span><span class="p">)</span>
+<span class="n">genre_artists</span> <span class="o">=</span> <span class="n">df_groupby_counts</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;genres&#39;</span><span class="p">)[</span><span class="s1">&#39;artist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="k">lambda</span> <span class="n">l</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+<span class="n">n_artists</span> <span class="o">=</span> <span class="n">df_groupby_counts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;genres&#39;</span><span class="p">)[</span><span class="s1">&#39;n_artists&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add this up top later</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.width&#39;</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_artists</span> <span class="o">=</span> <span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;total_occurences&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">n_artists</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">genre_artists</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_artists</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[85]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>total_occurences</th>
+      <th>n_artists</th>
+      <th>artist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>atl hip hop</th>
+      <td>10058</td>
+      <td>50</td>
+      <td>(2 Chainz, 21 Savage, B.o.B, Bankroll Mafia, C...</td>
+    </tr>
+    <tr>
+      <th>canadian hip hop</th>
+      <td>4787</td>
+      <td>18</td>
+      <td>(88GLAM, Baka Not Nice, Belly, DillanPonders, ...</td>
+    </tr>
+    <tr>
+      <th>hip hop</th>
+      <td>4601</td>
+      <td>41</td>
+      <td>(A$AP Ferg, A$AP Mob, A$AP Twelvyy, Aminé, Bab...</td>
+    </tr>
+    <tr>
+      <th>chicago rap</th>
+      <td>2872</td>
+      <td>13</td>
+      <td>(Chance the Rapper, Famous Dex, Jeremih, Joey ...</td>
+    </tr>
+    <tr>
+      <th>melodic rap</th>
+      <td>2707</td>
+      <td>22</td>
+      <td>(A Boogie wit da Hoodie, Boogie, Dior!*☠️, Hun...</td>
+    </tr>
+    <tr>
+      <th>conscious hip hop</th>
+      <td>1822</td>
+      <td>12</td>
+      <td>(David Banner, Dizzy Wright, Ice Cube, J. Cole...</td>
+    </tr>
+    <tr>
+      <th>dance pop</th>
+      <td>1655</td>
+      <td>110</td>
+      <td>(Alexandra Stan, Anne-Marie, Ariana Grande, Be...</td>
+    </tr>
+    <tr>
+      <th>rap</th>
+      <td>1548</td>
+      <td>11</td>
+      <td>(Blocboy JB, Don Toliver, JackBoys, Rich Gang,...</td>
+    </tr>
+    <tr>
+      <th>big room</th>
+      <td>1392</td>
+      <td>57</td>
+      <td>(3LAU, Afrojack, Alesso, Area21, Audien, Avici...</td>
+    </tr>
+    <tr>
+      <th>edm</th>
+      <td>1301</td>
+      <td>27</td>
+      <td>(Big Gigantic, Black Caviar, Breathe Carolina,...</td>
+    </tr>
+    <tr>
+      <th>alternative r&amp;b</th>
+      <td>1230</td>
+      <td>53</td>
+      <td>(070 Shake, 6LACK, Alina Baraz, Amber Mark, Ar...</td>
+    </tr>
+    <tr>
+      <th>east coast hip hop</th>
+      <td>807</td>
+      <td>10</td>
+      <td>(50 Cent, A$AP Rocky, Big Daddy Kane, JAY Z, J...</td>
+    </tr>
+    <tr>
+      <th>alternative hip hop</th>
+      <td>752</td>
+      <td>34</td>
+      <td>(9th Wonder, A Tribe Called Quest, Action Bron...</td>
+    </tr>
+    <tr>
+      <th>emo rap</th>
+      <td>752</td>
+      <td>6</td>
+      <td>(6ix9ine, Aries, Global Dan, Lil Pump, Lil Xan...</td>
+    </tr>
+    <tr>
+      <th>dark trap</th>
+      <td>630</td>
+      <td>19</td>
+      <td>($uicideboy$, CRAIG XEN, Chris Travis, Denzel ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Even just looking at the first few artists of each of these genres, it's apparent that we need to consolidate these genres.</p>
+<p>Let's take a look at how bad the distribution is, visually.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># aggregated_artists.n_artists.plot.hist(bins = 100)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">aggregated_artists</span><span class="o">.</span><span class="n">n_artists</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">hist</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">mean_n_artists</span> <span class="o">=</span> <span class="n">aggregated_artists</span><span class="o">.</span><span class="n">n_artists</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">mean_n_artists</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean artists per genre @&quot;</span><span class="p">,</span> <span class="n">mean_n_artists</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean artists per genre @ 4.068459657701712
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_svg output_subarea ">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="266.374219pt" version="1.1" viewBox="0 0 380.107031 266.374219" width="380.107031pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 266.374219 
+L 380.107031 266.374219 
+L 380.107031 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.107031 224.64 
+L 372.907031 224.64 
+L 372.907031 7.2 
+L 38.107031 7.2 
+z
+" style="fill:#eaeaf2;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path clip-path="url(#p1d85093018)" d="M 69.85049 224.64 
+L 69.85049 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <defs>
+       <path d="M 4.15625 35.296875 
+Q 4.15625 48 6.765625 55.734375 
+Q 9.375 63.484375 14.515625 67.671875 
+Q 19.671875 71.875 27.484375 71.875 
+Q 33.25 71.875 37.59375 69.546875 
+Q 41.9375 67.234375 44.765625 62.859375 
+Q 47.609375 58.5 49.21875 52.21875 
+Q 50.828125 45.953125 50.828125 35.296875 
+Q 50.828125 22.703125 48.234375 14.96875 
+Q 45.65625 7.234375 40.5 3 
+Q 35.359375 -1.21875 27.484375 -1.21875 
+Q 17.140625 -1.21875 11.234375 6.203125 
+Q 4.15625 15.140625 4.15625 35.296875 
+z
+M 13.1875 35.296875 
+Q 13.1875 17.671875 17.3125 11.828125 
+Q 21.4375 6 27.484375 6 
+Q 33.546875 6 37.671875 11.859375 
+Q 41.796875 17.71875 41.796875 35.296875 
+Q 41.796875 52.984375 37.671875 58.78125 
+Q 33.546875 64.59375 27.390625 64.59375 
+Q 21.34375 64.59375 17.71875 59.46875 
+Q 13.1875 52.9375 13.1875 35.296875 
+z
+" id="ArialMT-48"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(66.791974 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <path clip-path="url(#p1d85093018)" d="M 118.73573 224.64 
+L 118.73573 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_2">
+      <!-- 20 -->
+      <defs>
+       <path d="M 50.34375 8.453125 
+L 50.34375 0 
+L 3.03125 0 
+Q 2.9375 3.171875 4.046875 6.109375 
+Q 5.859375 10.9375 9.828125 15.625 
+Q 13.8125 20.3125 21.34375 26.46875 
+Q 33.015625 36.03125 37.109375 41.625 
+Q 41.21875 47.21875 41.21875 52.203125 
+Q 41.21875 57.421875 37.46875 61 
+Q 33.734375 64.59375 27.734375 64.59375 
+Q 21.390625 64.59375 17.578125 60.78125 
+Q 13.765625 56.984375 13.71875 50.25 
+L 4.6875 51.171875 
+Q 5.609375 61.28125 11.65625 66.578125 
+Q 17.71875 71.875 27.9375 71.875 
+Q 38.234375 71.875 44.234375 66.15625 
+Q 50.25 60.453125 50.25 52 
+Q 50.25 47.703125 48.484375 43.546875 
+Q 46.734375 39.40625 42.65625 34.8125 
+Q 38.578125 30.21875 29.109375 22.21875 
+Q 21.1875 15.578125 18.9375 13.203125 
+Q 16.703125 10.84375 15.234375 8.453125 
+z
+" id="ArialMT-50"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(112.618699 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-50"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <path clip-path="url(#p1d85093018)" d="M 167.62097 224.64 
+L 167.62097 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_3">
+      <!-- 40 -->
+      <defs>
+       <path d="M 32.328125 0 
+L 32.328125 17.140625 
+L 1.265625 17.140625 
+L 1.265625 25.203125 
+L 33.9375 71.578125 
+L 41.109375 71.578125 
+L 41.109375 25.203125 
+L 50.78125 25.203125 
+L 50.78125 17.140625 
+L 41.109375 17.140625 
+L 41.109375 0 
+z
+M 32.328125 25.203125 
+L 32.328125 57.46875 
+L 9.90625 25.203125 
+z
+" id="ArialMT-52"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(161.503939 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-52"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <path clip-path="url(#p1d85093018)" d="M 216.50621 224.64 
+L 216.50621 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_4">
+      <!-- 60 -->
+      <defs>
+       <path d="M 49.75 54.046875 
+L 41.015625 53.375 
+Q 39.84375 58.546875 37.703125 60.890625 
+Q 34.125 64.65625 28.90625 64.65625 
+Q 24.703125 64.65625 21.53125 62.3125 
+Q 17.390625 59.28125 14.984375 53.46875 
+Q 12.59375 47.65625 12.5 36.921875 
+Q 15.671875 41.75 20.265625 44.09375 
+Q 24.859375 46.4375 29.890625 46.4375 
+Q 38.671875 46.4375 44.84375 39.96875 
+Q 51.03125 33.5 51.03125 23.25 
+Q 51.03125 16.5 48.125 10.71875 
+Q 45.21875 4.9375 40.140625 1.859375 
+Q 35.0625 -1.21875 28.609375 -1.21875 
+Q 17.625 -1.21875 10.6875 6.859375 
+Q 3.765625 14.9375 3.765625 33.5 
+Q 3.765625 54.25 11.421875 63.671875 
+Q 18.109375 71.875 29.4375 71.875 
+Q 37.890625 71.875 43.28125 67.140625 
+Q 48.6875 62.40625 49.75 54.046875 
+z
+M 13.875 23.1875 
+Q 13.875 18.65625 15.796875 14.5 
+Q 17.71875 10.359375 21.1875 8.171875 
+Q 24.65625 6 28.46875 6 
+Q 34.03125 6 38.03125 10.484375 
+Q 42.046875 14.984375 42.046875 22.703125 
+Q 42.046875 30.125 38.078125 34.390625 
+Q 34.125 38.671875 28.125 38.671875 
+Q 22.171875 38.671875 18.015625 34.390625 
+Q 13.875 30.125 13.875 23.1875 
+z
+" id="ArialMT-54"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(210.389179 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-54"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <path clip-path="url(#p1d85093018)" d="M 265.391451 224.64 
+L 265.391451 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_5">
+      <!-- 80 -->
+      <defs>
+       <path d="M 17.671875 38.8125 
+Q 12.203125 40.828125 9.5625 44.53125 
+Q 6.9375 48.25 6.9375 53.421875 
+Q 6.9375 61.234375 12.546875 66.546875 
+Q 18.171875 71.875 27.484375 71.875 
+Q 36.859375 71.875 42.578125 66.421875 
+Q 48.296875 60.984375 48.296875 53.171875 
+Q 48.296875 48.1875 45.671875 44.5 
+Q 43.0625 40.828125 37.75 38.8125 
+Q 44.34375 36.671875 47.78125 31.875 
+Q 51.21875 27.09375 51.21875 20.453125 
+Q 51.21875 11.28125 44.71875 5.03125 
+Q 38.234375 -1.21875 27.640625 -1.21875 
+Q 17.046875 -1.21875 10.546875 5.046875 
+Q 4.046875 11.328125 4.046875 20.703125 
+Q 4.046875 27.6875 7.59375 32.390625 
+Q 11.140625 37.109375 17.671875 38.8125 
+z
+M 15.921875 53.71875 
+Q 15.921875 48.640625 19.1875 45.40625 
+Q 22.46875 42.1875 27.6875 42.1875 
+Q 32.765625 42.1875 36.015625 45.375 
+Q 39.265625 48.578125 39.265625 53.21875 
+Q 39.265625 58.0625 35.90625 61.359375 
+Q 32.5625 64.65625 27.59375 64.65625 
+Q 22.5625 64.65625 19.234375 61.421875 
+Q 15.921875 58.203125 15.921875 53.71875 
+z
+M 13.09375 20.65625 
+Q 13.09375 16.890625 14.875 13.375 
+Q 16.65625 9.859375 20.171875 7.921875 
+Q 23.6875 6 27.734375 6 
+Q 34.03125 6 38.125 10.046875 
+Q 42.234375 14.109375 42.234375 20.359375 
+Q 42.234375 26.703125 38.015625 30.859375 
+Q 33.796875 35.015625 27.4375 35.015625 
+Q 21.234375 35.015625 17.15625 30.90625 
+Q 13.09375 26.8125 13.09375 20.65625 
+z
+" id="ArialMT-56"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(259.274419 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-56"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <path clip-path="url(#p1d85093018)" d="M 314.276691 224.64 
+L 314.276691 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_6">
+      <!-- 100 -->
+      <defs>
+       <path d="M 37.25 0 
+L 28.46875 0 
+L 28.46875 56 
+Q 25.296875 52.984375 20.140625 49.953125 
+Q 14.984375 46.921875 10.890625 45.40625 
+L 10.890625 53.90625 
+Q 18.265625 57.375 23.78125 62.296875 
+Q 29.296875 67.234375 31.59375 71.875 
+L 37.25 71.875 
+z
+" id="ArialMT-49"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(305.101144 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-49"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <path clip-path="url(#p1d85093018)" d="M 363.161931 224.64 
+L 363.161931 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_7">
+      <!-- 120 -->
+      <g style="fill:#262626;" transform="translate(353.986384 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-49"/>
+       <use x="55.615234" xlink:href="#ArialMT-50"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_8">
+     <!-- n_artists -->
+     <defs>
+      <path d="M 6.59375 0 
+L 6.59375 51.859375 
+L 14.5 51.859375 
+L 14.5 44.484375 
+Q 20.21875 53.03125 31 53.03125 
+Q 35.6875 53.03125 39.625 51.34375 
+Q 43.5625 49.65625 45.515625 46.921875 
+Q 47.46875 44.1875 48.25 40.4375 
+Q 48.734375 37.984375 48.734375 31.890625 
+L 48.734375 0 
+L 39.9375 0 
+L 39.9375 31.546875 
+Q 39.9375 36.921875 38.90625 39.578125 
+Q 37.890625 42.234375 35.28125 43.8125 
+Q 32.671875 45.40625 29.15625 45.40625 
+Q 23.53125 45.40625 19.453125 41.84375 
+Q 15.375 38.28125 15.375 28.328125 
+L 15.375 0 
+z
+" id="ArialMT-110"/>
+      <path d="M -1.515625 -19.875 
+L -1.515625 -13.53125 
+L 56.734375 -13.53125 
+L 56.734375 -19.875 
+z
+" id="ArialMT-95"/>
+      <path d="M 40.4375 6.390625 
+Q 35.546875 2.25 31.03125 0.53125 
+Q 26.515625 -1.171875 21.34375 -1.171875 
+Q 12.796875 -1.171875 8.203125 3 
+Q 3.609375 7.171875 3.609375 13.671875 
+Q 3.609375 17.484375 5.34375 20.625 
+Q 7.078125 23.78125 9.890625 25.6875 
+Q 12.703125 27.59375 16.21875 28.5625 
+Q 18.796875 29.25 24.03125 29.890625 
+Q 34.671875 31.15625 39.703125 32.90625 
+Q 39.75 34.71875 39.75 35.203125 
+Q 39.75 40.578125 37.25 42.78125 
+Q 33.890625 45.75 27.25 45.75 
+Q 21.046875 45.75 18.09375 43.578125 
+Q 15.140625 41.40625 13.71875 35.890625 
+L 5.125 37.0625 
+Q 6.296875 42.578125 8.984375 45.96875 
+Q 11.671875 49.359375 16.75 51.1875 
+Q 21.828125 53.03125 28.515625 53.03125 
+Q 35.15625 53.03125 39.296875 51.46875 
+Q 43.453125 49.90625 45.40625 47.53125 
+Q 47.359375 45.171875 48.140625 41.546875 
+Q 48.578125 39.3125 48.578125 33.453125 
+L 48.578125 21.734375 
+Q 48.578125 9.46875 49.140625 6.21875 
+Q 49.703125 2.984375 51.375 0 
+L 42.1875 0 
+Q 40.828125 2.734375 40.4375 6.390625 
+z
+M 39.703125 26.03125 
+Q 34.90625 24.078125 25.34375 22.703125 
+Q 19.921875 21.921875 17.671875 20.9375 
+Q 15.4375 19.96875 14.203125 18.09375 
+Q 12.984375 16.21875 12.984375 13.921875 
+Q 12.984375 10.40625 15.640625 8.0625 
+Q 18.3125 5.71875 23.4375 5.71875 
+Q 28.515625 5.71875 32.46875 7.9375 
+Q 36.421875 10.15625 38.28125 14.015625 
+Q 39.703125 17 39.703125 22.796875 
+z
+" id="ArialMT-97"/>
+      <path d="M 6.5 0 
+L 6.5 51.859375 
+L 14.40625 51.859375 
+L 14.40625 44 
+Q 17.4375 49.515625 20 51.265625 
+Q 22.5625 53.03125 25.640625 53.03125 
+Q 30.078125 53.03125 34.671875 50.203125 
+L 31.640625 42.046875 
+Q 28.421875 43.953125 25.203125 43.953125 
+Q 22.3125 43.953125 20.015625 42.21875 
+Q 17.71875 40.484375 16.75 37.40625 
+Q 15.28125 32.71875 15.28125 27.15625 
+L 15.28125 0 
+z
+" id="ArialMT-114"/>
+      <path d="M 25.78125 7.859375 
+L 27.046875 0.09375 
+Q 23.34375 -0.6875 20.40625 -0.6875 
+Q 15.625 -0.6875 12.984375 0.828125 
+Q 10.359375 2.34375 9.28125 4.8125 
+Q 8.203125 7.28125 8.203125 15.1875 
+L 8.203125 45.015625 
+L 1.765625 45.015625 
+L 1.765625 51.859375 
+L 8.203125 51.859375 
+L 8.203125 64.703125 
+L 16.9375 69.96875 
+L 16.9375 51.859375 
+L 25.78125 51.859375 
+L 25.78125 45.015625 
+L 16.9375 45.015625 
+L 16.9375 14.703125 
+Q 16.9375 10.9375 17.40625 9.859375 
+Q 17.875 8.796875 18.921875 8.15625 
+Q 19.96875 7.515625 21.921875 7.515625 
+Q 23.390625 7.515625 25.78125 7.859375 
+z
+" id="ArialMT-116"/>
+      <path d="M 6.640625 61.46875 
+L 6.640625 71.578125 
+L 15.4375 71.578125 
+L 15.4375 61.46875 
+z
+M 6.640625 0 
+L 6.640625 51.859375 
+L 15.4375 51.859375 
+L 15.4375 0 
+z
+" id="ArialMT-105"/>
+      <path d="M 3.078125 15.484375 
+L 11.765625 16.84375 
+Q 12.5 11.625 15.84375 8.84375 
+Q 19.1875 6.0625 25.203125 6.0625 
+Q 31.25 6.0625 34.171875 8.515625 
+Q 37.109375 10.984375 37.109375 14.3125 
+Q 37.109375 17.28125 34.515625 19 
+Q 32.71875 20.171875 25.53125 21.96875 
+Q 15.875 24.421875 12.140625 26.203125 
+Q 8.40625 27.984375 6.46875 31.125 
+Q 4.546875 34.28125 4.546875 38.09375 
+Q 4.546875 41.546875 6.125 44.5 
+Q 7.71875 47.46875 10.453125 49.421875 
+Q 12.5 50.921875 16.03125 51.96875 
+Q 19.578125 53.03125 23.640625 53.03125 
+Q 29.734375 53.03125 34.34375 51.265625 
+Q 38.96875 49.515625 41.15625 46.5 
+Q 43.359375 43.5 44.1875 38.484375 
+L 35.59375 37.3125 
+Q 35.015625 41.3125 32.203125 43.546875 
+Q 29.390625 45.796875 24.265625 45.796875 
+Q 18.21875 45.796875 15.625 43.796875 
+Q 13.03125 41.796875 13.03125 39.109375 
+Q 13.03125 37.40625 14.109375 36.03125 
+Q 15.1875 34.625 17.484375 33.6875 
+Q 18.796875 33.203125 25.25 31.453125 
+Q 34.578125 28.953125 38.25 27.359375 
+Q 41.9375 25.78125 44.03125 22.75 
+Q 46.140625 19.734375 46.140625 15.234375 
+Q 46.140625 10.84375 43.578125 6.953125 
+Q 41.015625 3.078125 36.171875 0.953125 
+Q 31.34375 -1.171875 25.25 -1.171875 
+Q 15.140625 -1.171875 9.84375 3.03125 
+Q 4.546875 7.234375 3.078125 15.484375 
+z
+" id="ArialMT-115"/>
+     </defs>
+     <g style="fill:#262626;" transform="translate(182.832656 256.789219)scale(0.12 -0.12)">
+      <use xlink:href="#ArialMT-110"/>
+      <use x="55.615234" xlink:href="#ArialMT-95"/>
+      <use x="111.230469" xlink:href="#ArialMT-97"/>
+      <use x="166.845703" xlink:href="#ArialMT-114"/>
+      <use x="200.146484" xlink:href="#ArialMT-116"/>
+      <use x="227.929688" xlink:href="#ArialMT-105"/>
+      <use x="250.146484" xlink:href="#ArialMT-115"/>
+      <use x="300.146484" xlink:href="#ArialMT-116"/>
+      <use x="327.929688" xlink:href="#ArialMT-115"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_8">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 214.756364 
+L 372.907031 214.756364 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_9">
+      <!-- 0.00 -->
+      <defs>
+       <path d="M 9.078125 0 
+L 9.078125 10.015625 
+L 19.09375 10.015625 
+L 19.09375 0 
+z
+" id="ArialMT-46"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(7.2 218.693161)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-48"/>
+       <use x="139.013672" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 181.938632 
+L 372.907031 181.938632 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_10">
+      <!-- 0.02 -->
+      <g style="fill:#262626;" transform="translate(7.2 185.875428)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-48"/>
+       <use x="139.013672" xlink:href="#ArialMT-50"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 149.1209 
+L 372.907031 149.1209 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_11">
+      <!-- 0.04 -->
+      <g style="fill:#262626;" transform="translate(7.2 153.057696)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-48"/>
+       <use x="139.013672" xlink:href="#ArialMT-52"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 116.303168 
+L 372.907031 116.303168 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_12">
+      <!-- 0.06 -->
+      <g style="fill:#262626;" transform="translate(7.2 120.239964)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-48"/>
+       <use x="139.013672" xlink:href="#ArialMT-54"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 83.485436 
+L 372.907031 83.485436 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_13">
+      <!-- 0.08 -->
+      <g style="fill:#262626;" transform="translate(7.2 87.422232)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-48"/>
+       <use x="139.013672" xlink:href="#ArialMT-56"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 50.667704 
+L 372.907031 50.667704 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_14">
+      <!-- 0.10 -->
+      <g style="fill:#262626;" transform="translate(7.2 54.6045)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-49"/>
+       <use x="139.013672" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_14">
+      <path clip-path="url(#p1d85093018)" d="M 38.107031 17.849972 
+L 372.907031 17.849972 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_15">
+      <!-- 0.12 -->
+      <g style="fill:#262626;" transform="translate(7.2 21.786768)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+       <use x="55.615234" xlink:href="#ArialMT-46"/>
+       <use x="83.398438" xlink:href="#ArialMT-49"/>
+       <use x="139.013672" xlink:href="#ArialMT-50"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path clip-path="url(#p1d85093018)" d="M 79.794871 214.756364 
+L 79.794871 17.849972 
+" style="fill:none;stroke:#1a1a1a;stroke-width:1.5;"/>
+   </g>
+   <g id="line2d_15">
+    <path clip-path="url(#p1d85093018)" d="M 53.325213 213.137603 
+L 56.399593 208.448097 
+L 59.473973 195.221148 
+L 62.548354 166.590457 
+L 65.622734 119.942905 
+L 68.697114 65.136897 
+L 71.771494 24.273868 
+L 74.845874 17.083636 
+L 77.920254 44.62699 
+L 80.994635 89.717234 
+L 84.069015 132.540073 
+L 87.143395 163.268996 
+L 90.217775 182.108729 
+L 93.292155 193.00726 
+L 96.366535 199.366946 
+L 99.440916 203.253739 
+L 102.515296 205.83351 
+L 105.589676 207.666579 
+L 108.664056 208.935598 
+L 111.738436 209.763754 
+L 114.812816 210.38011 
+L 117.887197 210.983122 
+L 120.961577 211.549541 
+L 124.035957 211.874672 
+L 127.110337 211.797479 
+L 130.184717 211.384709 
+L 133.259097 210.945622 
+L 136.333478 210.854821 
+L 139.407858 211.271106 
+L 142.482238 211.997759 
+L 145.556618 212.662046 
+L 148.630998 213.049335 
+L 151.705378 213.241361 
+L 154.779759 213.440365 
+L 157.854139 213.718092 
+L 160.928519 213.973432 
+L 164.002899 214.095038 
+L 167.077279 214.100468 
+L 170.151659 214.10601 
+L 173.22604 214.195983 
+L 176.30042 214.345876 
+L 179.3748 214.459466 
+L 182.44918 214.452816 
+L 185.52356 214.305994 
+L 188.59794 214.068473 
+L 191.672321 213.830666 
+L 194.746701 213.673265 
+L 197.821081 213.624765 
+L 200.895461 213.659126 
+L 203.969841 213.734116 
+L 207.044221 213.836915 
+L 210.118601 213.987423 
+L 213.192982 214.191364 
+L 216.267362 214.408373 
+L 219.341742 214.581856 
+L 222.416122 214.686209 
+L 225.490502 214.733928 
+L 228.564882 214.750677 
+L 231.639263 214.755223 
+L 234.713643 214.756183 
+L 237.788023 214.756341 
+L 240.862403 214.756361 
+L 243.936783 214.756363 
+L 247.011163 214.756364 
+L 250.085544 214.756364 
+L 253.159924 214.756364 
+L 256.234304 214.756364 
+L 259.308684 214.756364 
+L 262.383064 214.756364 
+L 265.457444 214.756364 
+L 268.531825 214.756364 
+L 271.606205 214.756364 
+L 274.680585 214.756364 
+L 277.754965 214.756364 
+L 280.829345 214.756364 
+L 283.903725 214.756364 
+L 286.978106 214.756364 
+L 290.052486 214.756364 
+L 293.126866 214.756364 
+L 296.201246 214.756364 
+L 299.275626 214.756364 
+L 302.350006 214.756364 
+L 305.424387 214.756363 
+L 308.498767 214.756357 
+L 311.573147 214.756301 
+L 314.647527 214.755915 
+L 317.721907 214.753838 
+L 320.796287 214.745129 
+L 323.870668 214.716879 
+L 326.945048 214.64675 
+L 330.019428 214.51599 
+L 333.093808 214.33998 
+L 336.168188 214.186612 
+L 339.242568 214.140531 
+L 342.316949 214.23056 
+L 345.391329 214.401738 
+L 348.465709 214.567434 
+L 351.540089 214.676855 
+L 354.614469 214.729933 
+L 357.688849 214.749423 
+" style="fill:none;stroke:#4c72b0;stroke-linecap:round;stroke-width:1.5;"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 38.107031 224.64 
+L 38.107031 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 372.907031 224.64 
+L 372.907031 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 38.107031 224.64 
+L 372.907031 224.64 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 38.107031 7.2 
+L 372.907031 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1d85093018">
+   <rect height="217.44" width="334.8" x="38.107031" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">aggregated_artists</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;total_occurences&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;n_artists&#39;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;Blue&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[119]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1211498d0&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_svg output_subarea ">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="266.374219pt" version="1.1" viewBox="0 0 404.259531 266.374219" width="404.259531pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 266.374219 
+L 404.259531 266.374219 
+L 404.259531 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 62.259531 224.64 
+L 397.059531 224.64 
+L 397.059531 7.2 
+L 62.259531 7.2 
+z
+" style="fill:#eaeaf2;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path clip-path="url(#pfd1004599c)" d="M 74.685386 224.64 
+L 74.685386 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <defs>
+       <path d="M 4.15625 35.296875 
+Q 4.15625 48 6.765625 55.734375 
+Q 9.375 63.484375 14.515625 67.671875 
+Q 19.671875 71.875 27.484375 71.875 
+Q 33.25 71.875 37.59375 69.546875 
+Q 41.9375 67.234375 44.765625 62.859375 
+Q 47.609375 58.5 49.21875 52.21875 
+Q 50.828125 45.953125 50.828125 35.296875 
+Q 50.828125 22.703125 48.234375 14.96875 
+Q 45.65625 7.234375 40.5 3 
+Q 35.359375 -1.21875 27.484375 -1.21875 
+Q 17.140625 -1.21875 11.234375 6.203125 
+Q 4.15625 15.140625 4.15625 35.296875 
+z
+M 13.1875 35.296875 
+Q 13.1875 17.671875 17.3125 11.828125 
+Q 21.4375 6 27.484375 6 
+Q 33.546875 6 37.671875 11.859375 
+Q 41.796875 17.71875 41.796875 35.296875 
+Q 41.796875 52.984375 37.671875 58.78125 
+Q 33.546875 64.59375 27.390625 64.59375 
+Q 21.34375 64.59375 17.71875 59.46875 
+Q 13.1875 52.9375 13.1875 35.296875 
+z
+" id="ArialMT-48"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(71.626871 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <path clip-path="url(#pfd1004599c)" d="M 130.531925 224.64 
+L 130.531925 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_2">
+      <!-- 20 -->
+      <defs>
+       <path d="M 50.34375 8.453125 
+L 50.34375 0 
+L 3.03125 0 
+Q 2.9375 3.171875 4.046875 6.109375 
+Q 5.859375 10.9375 9.828125 15.625 
+Q 13.8125 20.3125 21.34375 26.46875 
+Q 33.015625 36.03125 37.109375 41.625 
+Q 41.21875 47.21875 41.21875 52.203125 
+Q 41.21875 57.421875 37.46875 61 
+Q 33.734375 64.59375 27.734375 64.59375 
+Q 21.390625 64.59375 17.578125 60.78125 
+Q 13.765625 56.984375 13.71875 50.25 
+L 4.6875 51.171875 
+Q 5.609375 61.28125 11.65625 66.578125 
+Q 17.71875 71.875 27.9375 71.875 
+Q 38.234375 71.875 44.234375 66.15625 
+Q 50.25 60.453125 50.25 52 
+Q 50.25 47.703125 48.484375 43.546875 
+Q 46.734375 39.40625 42.65625 34.8125 
+Q 38.578125 30.21875 29.109375 22.21875 
+Q 21.1875 15.578125 18.9375 13.203125 
+Q 16.703125 10.84375 15.234375 8.453125 
+z
+" id="ArialMT-50"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(124.414894 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-50"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <path clip-path="url(#pfd1004599c)" d="M 186.378464 224.64 
+L 186.378464 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_3">
+      <!-- 40 -->
+      <defs>
+       <path d="M 32.328125 0 
+L 32.328125 17.140625 
+L 1.265625 17.140625 
+L 1.265625 25.203125 
+L 33.9375 71.578125 
+L 41.109375 71.578125 
+L 41.109375 25.203125 
+L 50.78125 25.203125 
+L 50.78125 17.140625 
+L 41.109375 17.140625 
+L 41.109375 0 
+z
+M 32.328125 25.203125 
+L 32.328125 57.46875 
+L 9.90625 25.203125 
+z
+" id="ArialMT-52"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(180.261432 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-52"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <path clip-path="url(#pfd1004599c)" d="M 242.225002 224.64 
+L 242.225002 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_4">
+      <!-- 60 -->
+      <defs>
+       <path d="M 49.75 54.046875 
+L 41.015625 53.375 
+Q 39.84375 58.546875 37.703125 60.890625 
+Q 34.125 64.65625 28.90625 64.65625 
+Q 24.703125 64.65625 21.53125 62.3125 
+Q 17.390625 59.28125 14.984375 53.46875 
+Q 12.59375 47.65625 12.5 36.921875 
+Q 15.671875 41.75 20.265625 44.09375 
+Q 24.859375 46.4375 29.890625 46.4375 
+Q 38.671875 46.4375 44.84375 39.96875 
+Q 51.03125 33.5 51.03125 23.25 
+Q 51.03125 16.5 48.125 10.71875 
+Q 45.21875 4.9375 40.140625 1.859375 
+Q 35.0625 -1.21875 28.609375 -1.21875 
+Q 17.625 -1.21875 10.6875 6.859375 
+Q 3.765625 14.9375 3.765625 33.5 
+Q 3.765625 54.25 11.421875 63.671875 
+Q 18.109375 71.875 29.4375 71.875 
+Q 37.890625 71.875 43.28125 67.140625 
+Q 48.6875 62.40625 49.75 54.046875 
+z
+M 13.875 23.1875 
+Q 13.875 18.65625 15.796875 14.5 
+Q 17.71875 10.359375 21.1875 8.171875 
+Q 24.65625 6 28.46875 6 
+Q 34.03125 6 38.03125 10.484375 
+Q 42.046875 14.984375 42.046875 22.703125 
+Q 42.046875 30.125 38.078125 34.390625 
+Q 34.125 38.671875 28.125 38.671875 
+Q 22.171875 38.671875 18.015625 34.390625 
+Q 13.875 30.125 13.875 23.1875 
+z
+" id="ArialMT-54"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(236.107971 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-54"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <path clip-path="url(#pfd1004599c)" d="M 298.071541 224.64 
+L 298.071541 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_5">
+      <!-- 80 -->
+      <defs>
+       <path d="M 17.671875 38.8125 
+Q 12.203125 40.828125 9.5625 44.53125 
+Q 6.9375 48.25 6.9375 53.421875 
+Q 6.9375 61.234375 12.546875 66.546875 
+Q 18.171875 71.875 27.484375 71.875 
+Q 36.859375 71.875 42.578125 66.421875 
+Q 48.296875 60.984375 48.296875 53.171875 
+Q 48.296875 48.1875 45.671875 44.5 
+Q 43.0625 40.828125 37.75 38.8125 
+Q 44.34375 36.671875 47.78125 31.875 
+Q 51.21875 27.09375 51.21875 20.453125 
+Q 51.21875 11.28125 44.71875 5.03125 
+Q 38.234375 -1.21875 27.640625 -1.21875 
+Q 17.046875 -1.21875 10.546875 5.046875 
+Q 4.046875 11.328125 4.046875 20.703125 
+Q 4.046875 27.6875 7.59375 32.390625 
+Q 11.140625 37.109375 17.671875 38.8125 
+z
+M 15.921875 53.71875 
+Q 15.921875 48.640625 19.1875 45.40625 
+Q 22.46875 42.1875 27.6875 42.1875 
+Q 32.765625 42.1875 36.015625 45.375 
+Q 39.265625 48.578125 39.265625 53.21875 
+Q 39.265625 58.0625 35.90625 61.359375 
+Q 32.5625 64.65625 27.59375 64.65625 
+Q 22.5625 64.65625 19.234375 61.421875 
+Q 15.921875 58.203125 15.921875 53.71875 
+z
+M 13.09375 20.65625 
+Q 13.09375 16.890625 14.875 13.375 
+Q 16.65625 9.859375 20.171875 7.921875 
+Q 23.6875 6 27.734375 6 
+Q 34.03125 6 38.125 10.046875 
+Q 42.234375 14.109375 42.234375 20.359375 
+Q 42.234375 26.703125 38.015625 30.859375 
+Q 33.796875 35.015625 27.4375 35.015625 
+Q 21.234375 35.015625 17.15625 30.90625 
+Q 13.09375 26.8125 13.09375 20.65625 
+z
+" id="ArialMT-56"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(291.95451 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-56"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <path clip-path="url(#pfd1004599c)" d="M 353.91808 224.64 
+L 353.91808 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_6">
+      <!-- 100 -->
+      <defs>
+       <path d="M 37.25 0 
+L 28.46875 0 
+L 28.46875 56 
+Q 25.296875 52.984375 20.140625 49.953125 
+Q 14.984375 46.921875 10.890625 45.40625 
+L 10.890625 53.90625 
+Q 18.265625 57.375 23.78125 62.296875 
+Q 29.296875 67.234375 31.59375 71.875 
+L 37.25 71.875 
+z
+" id="ArialMT-49"/>
+      </defs>
+      <g style="fill:#262626;" transform="translate(344.742533 242.013594)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-49"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_7">
+     <!-- n_artists -->
+     <defs>
+      <path d="M 6.59375 0 
+L 6.59375 51.859375 
+L 14.5 51.859375 
+L 14.5 44.484375 
+Q 20.21875 53.03125 31 53.03125 
+Q 35.6875 53.03125 39.625 51.34375 
+Q 43.5625 49.65625 45.515625 46.921875 
+Q 47.46875 44.1875 48.25 40.4375 
+Q 48.734375 37.984375 48.734375 31.890625 
+L 48.734375 0 
+L 39.9375 0 
+L 39.9375 31.546875 
+Q 39.9375 36.921875 38.90625 39.578125 
+Q 37.890625 42.234375 35.28125 43.8125 
+Q 32.671875 45.40625 29.15625 45.40625 
+Q 23.53125 45.40625 19.453125 41.84375 
+Q 15.375 38.28125 15.375 28.328125 
+L 15.375 0 
+z
+" id="ArialMT-110"/>
+      <path d="M -1.515625 -19.875 
+L -1.515625 -13.53125 
+L 56.734375 -13.53125 
+L 56.734375 -19.875 
+z
+" id="ArialMT-95"/>
+      <path d="M 40.4375 6.390625 
+Q 35.546875 2.25 31.03125 0.53125 
+Q 26.515625 -1.171875 21.34375 -1.171875 
+Q 12.796875 -1.171875 8.203125 3 
+Q 3.609375 7.171875 3.609375 13.671875 
+Q 3.609375 17.484375 5.34375 20.625 
+Q 7.078125 23.78125 9.890625 25.6875 
+Q 12.703125 27.59375 16.21875 28.5625 
+Q 18.796875 29.25 24.03125 29.890625 
+Q 34.671875 31.15625 39.703125 32.90625 
+Q 39.75 34.71875 39.75 35.203125 
+Q 39.75 40.578125 37.25 42.78125 
+Q 33.890625 45.75 27.25 45.75 
+Q 21.046875 45.75 18.09375 43.578125 
+Q 15.140625 41.40625 13.71875 35.890625 
+L 5.125 37.0625 
+Q 6.296875 42.578125 8.984375 45.96875 
+Q 11.671875 49.359375 16.75 51.1875 
+Q 21.828125 53.03125 28.515625 53.03125 
+Q 35.15625 53.03125 39.296875 51.46875 
+Q 43.453125 49.90625 45.40625 47.53125 
+Q 47.359375 45.171875 48.140625 41.546875 
+Q 48.578125 39.3125 48.578125 33.453125 
+L 48.578125 21.734375 
+Q 48.578125 9.46875 49.140625 6.21875 
+Q 49.703125 2.984375 51.375 0 
+L 42.1875 0 
+Q 40.828125 2.734375 40.4375 6.390625 
+z
+M 39.703125 26.03125 
+Q 34.90625 24.078125 25.34375 22.703125 
+Q 19.921875 21.921875 17.671875 20.9375 
+Q 15.4375 19.96875 14.203125 18.09375 
+Q 12.984375 16.21875 12.984375 13.921875 
+Q 12.984375 10.40625 15.640625 8.0625 
+Q 18.3125 5.71875 23.4375 5.71875 
+Q 28.515625 5.71875 32.46875 7.9375 
+Q 36.421875 10.15625 38.28125 14.015625 
+Q 39.703125 17 39.703125 22.796875 
+z
+" id="ArialMT-97"/>
+      <path d="M 6.5 0 
+L 6.5 51.859375 
+L 14.40625 51.859375 
+L 14.40625 44 
+Q 17.4375 49.515625 20 51.265625 
+Q 22.5625 53.03125 25.640625 53.03125 
+Q 30.078125 53.03125 34.671875 50.203125 
+L 31.640625 42.046875 
+Q 28.421875 43.953125 25.203125 43.953125 
+Q 22.3125 43.953125 20.015625 42.21875 
+Q 17.71875 40.484375 16.75 37.40625 
+Q 15.28125 32.71875 15.28125 27.15625 
+L 15.28125 0 
+z
+" id="ArialMT-114"/>
+      <path d="M 25.78125 7.859375 
+L 27.046875 0.09375 
+Q 23.34375 -0.6875 20.40625 -0.6875 
+Q 15.625 -0.6875 12.984375 0.828125 
+Q 10.359375 2.34375 9.28125 4.8125 
+Q 8.203125 7.28125 8.203125 15.1875 
+L 8.203125 45.015625 
+L 1.765625 45.015625 
+L 1.765625 51.859375 
+L 8.203125 51.859375 
+L 8.203125 64.703125 
+L 16.9375 69.96875 
+L 16.9375 51.859375 
+L 25.78125 51.859375 
+L 25.78125 45.015625 
+L 16.9375 45.015625 
+L 16.9375 14.703125 
+Q 16.9375 10.9375 17.40625 9.859375 
+Q 17.875 8.796875 18.921875 8.15625 
+Q 19.96875 7.515625 21.921875 7.515625 
+Q 23.390625 7.515625 25.78125 7.859375 
+z
+" id="ArialMT-116"/>
+      <path d="M 6.640625 61.46875 
+L 6.640625 71.578125 
+L 15.4375 71.578125 
+L 15.4375 61.46875 
+z
+M 6.640625 0 
+L 6.640625 51.859375 
+L 15.4375 51.859375 
+L 15.4375 0 
+z
+" id="ArialMT-105"/>
+      <path d="M 3.078125 15.484375 
+L 11.765625 16.84375 
+Q 12.5 11.625 15.84375 8.84375 
+Q 19.1875 6.0625 25.203125 6.0625 
+Q 31.25 6.0625 34.171875 8.515625 
+Q 37.109375 10.984375 37.109375 14.3125 
+Q 37.109375 17.28125 34.515625 19 
+Q 32.71875 20.171875 25.53125 21.96875 
+Q 15.875 24.421875 12.140625 26.203125 
+Q 8.40625 27.984375 6.46875 31.125 
+Q 4.546875 34.28125 4.546875 38.09375 
+Q 4.546875 41.546875 6.125 44.5 
+Q 7.71875 47.46875 10.453125 49.421875 
+Q 12.5 50.921875 16.03125 51.96875 
+Q 19.578125 53.03125 23.640625 53.03125 
+Q 29.734375 53.03125 34.34375 51.265625 
+Q 38.96875 49.515625 41.15625 46.5 
+Q 43.359375 43.5 44.1875 38.484375 
+L 35.59375 37.3125 
+Q 35.015625 41.3125 32.203125 43.546875 
+Q 29.390625 45.796875 24.265625 45.796875 
+Q 18.21875 45.796875 15.625 43.796875 
+Q 13.03125 41.796875 13.03125 39.109375 
+Q 13.03125 37.40625 14.109375 36.03125 
+Q 15.1875 34.625 17.484375 33.6875 
+Q 18.796875 33.203125 25.25 31.453125 
+Q 34.578125 28.953125 38.25 27.359375 
+Q 41.9375 25.78125 44.03125 22.75 
+Q 46.140625 19.734375 46.140625 15.234375 
+Q 46.140625 10.84375 43.578125 6.953125 
+Q 41.015625 3.078125 36.171875 0.953125 
+Q 31.34375 -1.171875 25.25 -1.171875 
+Q 15.140625 -1.171875 9.84375 3.03125 
+Q 4.546875 7.234375 3.078125 15.484375 
+z
+" id="ArialMT-115"/>
+     </defs>
+     <g style="fill:#262626;" transform="translate(206.985156 256.789219)scale(0.12 -0.12)">
+      <use xlink:href="#ArialMT-110"/>
+      <use x="55.615234" xlink:href="#ArialMT-95"/>
+      <use x="111.230469" xlink:href="#ArialMT-97"/>
+      <use x="166.845703" xlink:href="#ArialMT-114"/>
+      <use x="200.146484" xlink:href="#ArialMT-116"/>
+      <use x="227.929688" xlink:href="#ArialMT-105"/>
+      <use x="250.146484" xlink:href="#ArialMT-115"/>
+      <use x="300.146484" xlink:href="#ArialMT-116"/>
+      <use x="327.929688" xlink:href="#ArialMT-115"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 214.776019 
+L 397.059531 214.776019 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_8">
+      <!-- 0 -->
+      <g style="fill:#262626;" transform="translate(46.6425 218.712816)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 175.465543 
+L 397.059531 175.465543 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_9">
+      <!-- 2000 -->
+      <g style="fill:#262626;" transform="translate(28.291406 179.40234)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-50"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+       <use x="166.845703" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 136.155067 
+L 397.059531 136.155067 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_10">
+      <!-- 4000 -->
+      <g style="fill:#262626;" transform="translate(28.291406 140.091864)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-52"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+       <use x="166.845703" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 96.844592 
+L 397.059531 96.844592 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_11">
+      <!-- 6000 -->
+      <g style="fill:#262626;" transform="translate(28.291406 100.781389)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-54"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+       <use x="166.845703" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 57.534116 
+L 397.059531 57.534116 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_12">
+      <!-- 8000 -->
+      <g style="fill:#262626;" transform="translate(28.291406 61.470913)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-56"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+       <use x="166.845703" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <path clip-path="url(#pfd1004599c)" d="M 62.259531 18.22364 
+L 397.059531 18.22364 
+" style="fill:none;stroke:#ffffff;stroke-linecap:round;"/>
+     </g>
+     <g id="text_13">
+      <!-- 10000 -->
+      <g style="fill:#262626;" transform="translate(22.174375 22.160437)scale(0.11 -0.11)">
+       <use xlink:href="#ArialMT-49"/>
+       <use x="55.615234" xlink:href="#ArialMT-48"/>
+       <use x="111.230469" xlink:href="#ArialMT-48"/>
+       <use x="166.845703" xlink:href="#ArialMT-48"/>
+       <use x="222.460938" xlink:href="#ArialMT-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_14">
+     <!-- total_occurences -->
+     <defs>
+      <path d="M 3.328125 25.921875 
+Q 3.328125 40.328125 11.328125 47.265625 
+Q 18.015625 53.03125 27.640625 53.03125 
+Q 38.328125 53.03125 45.109375 46.015625 
+Q 51.90625 39.015625 51.90625 26.65625 
+Q 51.90625 16.65625 48.90625 10.90625 
+Q 45.90625 5.171875 40.15625 2 
+Q 34.421875 -1.171875 27.640625 -1.171875 
+Q 16.75 -1.171875 10.03125 5.8125 
+Q 3.328125 12.796875 3.328125 25.921875 
+z
+M 12.359375 25.921875 
+Q 12.359375 15.96875 16.703125 11.015625 
+Q 21.046875 6.0625 27.640625 6.0625 
+Q 34.1875 6.0625 38.53125 11.03125 
+Q 42.875 16.015625 42.875 26.21875 
+Q 42.875 35.84375 38.5 40.796875 
+Q 34.125 45.75 27.640625 45.75 
+Q 21.046875 45.75 16.703125 40.8125 
+Q 12.359375 35.890625 12.359375 25.921875 
+z
+" id="ArialMT-111"/>
+      <path d="M 6.390625 0 
+L 6.390625 71.578125 
+L 15.1875 71.578125 
+L 15.1875 0 
+z
+" id="ArialMT-108"/>
+      <path d="M 40.4375 19 
+L 49.078125 17.875 
+Q 47.65625 8.9375 41.8125 3.875 
+Q 35.984375 -1.171875 27.484375 -1.171875 
+Q 16.84375 -1.171875 10.375 5.78125 
+Q 3.90625 12.75 3.90625 25.734375 
+Q 3.90625 34.125 6.6875 40.421875 
+Q 9.46875 46.734375 15.15625 49.875 
+Q 20.84375 53.03125 27.546875 53.03125 
+Q 35.984375 53.03125 41.359375 48.75 
+Q 46.734375 44.484375 48.25 36.625 
+L 39.703125 35.296875 
+Q 38.484375 40.53125 35.375 43.15625 
+Q 32.28125 45.796875 27.875 45.796875 
+Q 21.234375 45.796875 17.078125 41.03125 
+Q 12.9375 36.28125 12.9375 25.984375 
+Q 12.9375 15.53125 16.9375 10.796875 
+Q 20.953125 6.0625 27.390625 6.0625 
+Q 32.5625 6.0625 36.03125 9.234375 
+Q 39.5 12.40625 40.4375 19 
+z
+" id="ArialMT-99"/>
+      <path d="M 40.578125 0 
+L 40.578125 7.625 
+Q 34.515625 -1.171875 24.125 -1.171875 
+Q 19.53125 -1.171875 15.546875 0.578125 
+Q 11.578125 2.34375 9.640625 5 
+Q 7.71875 7.671875 6.9375 11.53125 
+Q 6.390625 14.109375 6.390625 19.734375 
+L 6.390625 51.859375 
+L 15.1875 51.859375 
+L 15.1875 23.09375 
+Q 15.1875 16.21875 15.71875 13.8125 
+Q 16.546875 10.359375 19.234375 8.375 
+Q 21.921875 6.390625 25.875 6.390625 
+Q 29.828125 6.390625 33.296875 8.421875 
+Q 36.765625 10.453125 38.203125 13.9375 
+Q 39.65625 17.4375 39.65625 24.078125 
+L 39.65625 51.859375 
+L 48.4375 51.859375 
+L 48.4375 0 
+z
+" id="ArialMT-117"/>
+      <path d="M 42.09375 16.703125 
+L 51.171875 15.578125 
+Q 49.03125 7.625 43.21875 3.21875 
+Q 37.40625 -1.171875 28.375 -1.171875 
+Q 17 -1.171875 10.328125 5.828125 
+Q 3.65625 12.84375 3.65625 25.484375 
+Q 3.65625 38.578125 10.390625 45.796875 
+Q 17.140625 53.03125 27.875 53.03125 
+Q 38.28125 53.03125 44.875 45.953125 
+Q 51.46875 38.875 51.46875 26.03125 
+Q 51.46875 25.25 51.421875 23.6875 
+L 12.75 23.6875 
+Q 13.234375 15.140625 17.578125 10.59375 
+Q 21.921875 6.0625 28.421875 6.0625 
+Q 33.25 6.0625 36.671875 8.59375 
+Q 40.09375 11.140625 42.09375 16.703125 
+z
+M 13.234375 30.90625 
+L 42.1875 30.90625 
+Q 41.609375 37.453125 38.875 40.71875 
+Q 34.671875 45.796875 27.984375 45.796875 
+Q 21.921875 45.796875 17.796875 41.75 
+Q 13.671875 37.703125 13.234375 30.90625 
+z
+" id="ArialMT-101"/>
+     </defs>
+     <g style="fill:#262626;" transform="translate(15.789375 161.277187)rotate(-90)scale(0.12 -0.12)">
+      <use xlink:href="#ArialMT-116"/>
+      <use x="27.783203" xlink:href="#ArialMT-111"/>
+      <use x="83.398438" xlink:href="#ArialMT-116"/>
+      <use x="111.181641" xlink:href="#ArialMT-97"/>
+      <use x="166.796875" xlink:href="#ArialMT-108"/>
+      <use x="189.013672" xlink:href="#ArialMT-95"/>
+      <use x="244.628906" xlink:href="#ArialMT-111"/>
+      <use x="300.244141" xlink:href="#ArialMT-99"/>
+      <use x="350.244141" xlink:href="#ArialMT-99"/>
+      <use x="400.244141" xlink:href="#ArialMT-117"/>
+      <use x="455.859375" xlink:href="#ArialMT-114"/>
+      <use x="489.160156" xlink:href="#ArialMT-101"/>
+      <use x="544.775391" xlink:href="#ArialMT-110"/>
+      <use x="600.390625" xlink:href="#ArialMT-99"/>
+      <use x="650.390625" xlink:href="#ArialMT-101"/>
+      <use x="706.005859" xlink:href="#ArialMT-115"/>
+     </g>
+    </g>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path d="M 0 0.707107 
+C 0.187527 0.707107 0.367398 0.632602 0.5 0.5 
+C 0.632602 0.367398 0.707107 0.187527 0.707107 0 
+C 0.707107 -0.187527 0.632602 -0.367398 0.5 -0.5 
+C 0.367398 -0.632602 0.187527 -0.707107 0 -0.707107 
+C -0.187527 -0.707107 -0.367398 -0.632602 -0.5 -0.5 
+C -0.632602 -0.367398 -0.707107 -0.187527 -0.707107 0 
+C -0.707107 0.187527 -0.632602 0.367398 -0.5 0.5 
+C -0.367398 0.632602 -0.187527 0.707107 0 0.707107 
+z
+" id="me87d65fcd5" style="stroke:#0000ff;"/>
+    </defs>
+    <g clip-path="url(#pfd1004599c)">
+     <use style="fill:#0000ff;stroke:#0000ff;" x="214.301733" xlink:href="#me87d65fcd5" y="17.083636"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="124.947271" xlink:href="#me87d65fcd5" y="120.686395"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="189.170791" xlink:href="#me87d65fcd5" y="124.342269"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="110.985636" xlink:href="#me87d65fcd5" y="158.326176"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="136.116579" xlink:href="#me87d65fcd5" y="161.56929"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="108.193309" xlink:href="#me87d65fcd5" y="178.964175"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="381.841349" xlink:href="#me87d65fcd5" y="182.2466"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="105.400982" xlink:href="#me87d65fcd5" y="184.349711"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="233.848022" xlink:href="#me87d65fcd5" y="187.415928"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="150.078213" xlink:href="#me87d65fcd5" y="189.204554"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="222.678714" xlink:href="#me87d65fcd5" y="190.600076"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="102.608656" xlink:href="#me87d65fcd5" y="198.914242"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="169.624502" xlink:href="#me87d65fcd5" y="199.99528"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="199.99528"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="127.739598" xlink:href="#me87d65fcd5" y="202.393219"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="150.078213" xlink:href="#me87d65fcd5" y="203.965638"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="204.358743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="169.624502" xlink:href="#me87d65fcd5" y="205.380815"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="127.739598" xlink:href="#me87d65fcd5" y="205.420126"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="102.608656" xlink:href="#me87d65fcd5" y="205.911507"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="206.363577"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="206.658406"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="141.701233" xlink:href="#me87d65fcd5" y="206.678061"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="207.189097"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="127.739598" xlink:href="#me87d65fcd5" y="207.208752"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="150.078213" xlink:href="#me87d65fcd5" y="207.46427"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="207.641168"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="207.87703"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="207.935996"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="207.935996"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="113.777963" xlink:href="#me87d65fcd5" y="208.034272"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="119.362617" xlink:href="#me87d65fcd5" y="208.368411"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="122.154944" xlink:href="#me87d65fcd5" y="209.134966"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="209.567381"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="210.078417"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="108.193309" xlink:href="#me87d65fcd5" y="210.176693"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="210.196348"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="210.294625"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="155.662867" xlink:href="#me87d65fcd5" y="210.648419"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="110.985636" xlink:href="#me87d65fcd5" y="210.943247"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="210.982558"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="211.080834"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="211.1398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="152.87054" xlink:href="#me87d65fcd5" y="211.375663"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="211.473939"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="211.611526"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="211.729457"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="211.808078"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="211.808078"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="211.926009"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="212.043941"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="147.285887" xlink:href="#me87d65fcd5" y="212.063596"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="113.777963" xlink:href="#me87d65fcd5" y="212.083251"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="212.083251"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="212.122562"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="212.142217"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="212.260148"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="212.397735"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="212.437046"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="212.515667"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="105.400982" xlink:href="#me87d65fcd5" y="212.554977"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="212.672908"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="212.692564"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="212.712219"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="212.79084"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="212.889116"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="212.908771"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="212.948082"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="102.608656" xlink:href="#me87d65fcd5" y="212.967737"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="213.007047"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="213.085668"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.085668"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="213.144634"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.144634"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="113.777963" xlink:href="#me87d65fcd5" y="213.183945"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="213.262566"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="213.301876"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.360842"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="213.380497"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="213.459118"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="213.537739"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="213.557394"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.557394"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.557394"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="213.577049"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="213.577049"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="213.61636"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="99.816329" xlink:href="#me87d65fcd5" y="213.636015"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.636015"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.636015"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="213.636015"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="213.65567"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="108.193309" xlink:href="#me87d65fcd5" y="213.694981"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="213.793257"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.793257"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="213.852223"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="213.852223"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.871878"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="213.871878"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="105.400982" xlink:href="#me87d65fcd5" y="213.871878"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="213.891533"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="213.930844"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="213.970154"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="213.970154"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="213.970154"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="214.009465"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.02912"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.02912"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.02912"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.06843"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.06843"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.107741"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.107741"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="91.439348" xlink:href="#me87d65fcd5" y="214.107741"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="99.816329" xlink:href="#me87d65fcd5" y="214.147051"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.147051"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.147051"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.166707"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.186362"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.186362"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.186362"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.206017"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.206017"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.245327"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.245327"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.264983"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.264983"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.284638"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.284638"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.284638"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.304293"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.323948"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.323948"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.323948"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="97.024002" xlink:href="#me87d65fcd5" y="214.343604"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.382914"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.402569"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.402569"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.422225"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.422225"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.422225"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.422225"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.422225"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.44188"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.44188"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.44188"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.44188"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.44188"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.461535"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.461535"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.461535"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.48119"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.48119"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.48119"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.500846"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="94.231675" xlink:href="#me87d65fcd5" y="214.520501"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.540156"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.559811"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.559811"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.579466"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.579466"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.599122"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.618777"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.618777"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.618777"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.618777"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.638432"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="88.647021" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.658087"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.677743"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="85.854694" xlink:href="#me87d65fcd5" y="214.697398"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="83.062367" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.717053"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="80.27004" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.736708"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+     <use style="fill:#0000ff;stroke:#0000ff;" x="77.477713" xlink:href="#me87d65fcd5" y="214.756364"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.259531 224.64 
+L 62.259531 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 397.059531 224.64 
+L 397.059531 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 62.259531 224.64 
+L 397.059531 224.64 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 62.259531 7.2 
+L 397.059531 7.2 
+" style="fill:none;stroke:#ffffff;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1.25;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfd1004599c">
+   <rect height="217.44" width="334.8" x="62.259531" y="7.2"/>
+  </clipPath>
+ </defs>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Both the distibution (KDE) plot and the scatterplot show the larger problem, which is that a large majority of genres provided by spotify are much too specific.</p>
+<p>According to the data, there's a total of 410 unique genres, and only roughly 4 artists per genre.  I would expect there to be much fewer genres (maybe on the order of 30-50?), with a much larger number of artists in each genre bucket.</p>
+<p>In order to combat this, I'll make my best effort to consolidate some of these genres based on keywords.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[122]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>artist</th>
+      <th>album</th>
+      <th>song</th>
+      <th>datetime</th>
+      <th>genres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Best I Ever Had</td>
+      <td>2020-05-20 01:08:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Thank Me Now</td>
+      <td>2020-05-20 01:03:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Find Your Love</td>
+      <td>2020-05-20 00:59:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Cece's Interlude</td>
+      <td>2020-05-20 00:57:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Miss Me</td>
+      <td>2020-05-20 00:52:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>57131</th>
+      <td>Madeintyo</td>
+      <td>Thank You Mr. Tokyo</td>
+      <td>Time Of Her Life</td>
+      <td>2017-07-04 15:26:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+    <tr>
+      <th>57132</th>
+      <td>DJ Khaled</td>
+      <td>Grateful</td>
+      <td>Iced Out My Arms</td>
+      <td>2017-07-04 15:23:00-04:00</td>
+      <td>dance pop</td>
+    </tr>
+    <tr>
+      <th>57133</th>
+      <td>Young Thug</td>
+      <td>Beautiful Thugger Girls</td>
+      <td>Daddy's Birthday</td>
+      <td>2017-07-01 17:33:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+    <tr>
+      <th>57134</th>
+      <td>Lil Wayne</td>
+      <td>Tha Carter IV (Deluxe)</td>
+      <td>How to Love</td>
+      <td>2017-06-29 23:39:00-04:00</td>
+      <td>hip hop</td>
+    </tr>
+    <tr>
+      <th>57135</th>
+      <td>2 Chainz</td>
+      <td>Pretty Girls Like Trap Music</td>
+      <td>It's A Vibe</td>
+      <td>2017-06-29 23:34:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+  </tbody>
+</table>
+<p>57136 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[130]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span><span class="p">[</span><span class="o">~</span><span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;hip hop|rap&#39;</span><span class="p">,</span> <span class="n">na</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)]</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[130]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dance pop                     1655
+big room                      1392
+edm                           1301
+alternative r&amp;b               1230
+album rock                     550
+alternative dance              478
+pop                            476
+channel islands indie          428
+deep groove house              412
+deep house                     385
+electropop                     372
+disco house                    363
+house                          348
+brostep                        326
+alternative metal              287
+future funk                    265
+alternative rock               234
+glam rock                      233
+chillwave                      228
+bass house                     210
+barbadian pop                  193
+electro                        188
+chillstep                      185
+escape room                    161
+boy band                       151
+permanent wave                 139
+adult standards                138
+art pop                        137
+baroque pop                    137
+australian dance               134
+g funk                         128
+canadian contemporary r&amp;b      121
+aussietronica                  119
+downtempo                      115
+indie pop                      113
+crunk                          107
+ukg revival                    106
+sleep                          105
+vapor twitch                   101
+funk                            96
+indie soul                      95
+beatlesque                      93
+classic soul                    92
+brill building pop              90
+birmingham grime                86
+contemporary country            81
+indie jazz                      75
+yacht rock                      72
+electronica                     71
+bow pop                         67
+chillhop                        63
+pop punk                        62
+indie poptimism                 62
+float house                     61
+gauze pop                       61
+garage rock                     59
+celtic metal                    58
+nu disco                        58
+deep disco house                58
+german soundtrack               58
+modern rock                     57
+clean comedy                    50
+banda                           50
+new french touch                47
+uk dance                        47
+complextro                      46
+bmore                           46
+latin                           46
+chicago drill                   45
+gaming edm                      41
+deep tropical house             41
+vapor soul                      38
+chicago indie                   38
+swedish electronic              36
+post-teen pop                   36
+pop edm                         34
+afrobeat                        34
+catstep                         32
+reggaeton flow                  32
+tropical house                  31
+emo                             30
+indietronica                    30
+lebanese indie                  30
+black comedy                    29
+canadian electronic             27
+uae indie                       27
+social media pop                26
+deep pop r&amp;b                    25
+filter house                    25
+indie r&amp;b                       25
+classic swedish pop             24
+electro house                   23
+chamber pop                     23
+grime                           22
+nyc pop                         20
+indie electronica               19
+deep big room                   19
+brazilian edm                   18
+german pop                      18
+hard rock                       18
+bboy                            18
+comedy                          17
+gymcore                         17
+movie tunes                     17
+danish electropop               17
+soft rock                       17
+neo r&amp;b                         16
+australian electropop           16
+canadian pop                    15
+hopebeat                        15
+romanian pop                    15
+experimental electronic         14
+acid rock                       14
+horror synth                    14
+dutch house                     14
+australian house                14
+eurodance                       13
+french indie pop                13
+lo-fi beats                     13
+progressive electro house       13
+future garage                   13
+bedroom pop                     13
+moombahton                      12
+metropopolis                    12
+dark disco                      12
+uk alternative pop              12
+art rock                        12
+bounce                          12
+lo-fi house                     12
+neo soul                        11
+canadian latin                  10
+australian indie                10
+british soul                     9
+bass music                       9
+indie electropop                 9
+jam band                         9
+jazz funk                        9
+breaks                           9
+irish pop                        8
+classic rock                     8
+big beat                         7
+deep euro house                  7
+bubblegum dance                  7
+colombian pop                    7
+scorecore                        7
+instrumental grime               7
+african electronic               6
+classical                        6
+uk house                         6
+afro house                       6
+chopped and screwed              6
+chicago soul                     6
+hip pop                          6
+afrofuturism                     5
+japanese jazztronica             5
+austrian pop                     5
+anime latino                     5
+boom bap                         5
+afropop                          5
+dutch pop                        5
+neo mellow                       5
+brazilian house                  5
+belgian edm                      5
+la pop                           5
+chicago house                    5
+drum and bass                    5
+compositional ambient            4
+scandipop                        4
+detroit house                    4
+uk tech house                    4
+danish electronic                4
+antiviral pop                    4
+dutch r&amp;b                        4
+indie rock                       4
+soul flow                        4
+k-pop                            4
+dutch prog                       4
+finnish edm                      3
+a cappella                       3
+edmonton indie                   3
+acid house                       3
+folk-pop                         3
+minimal tech house               3
+chiptune                         3
+electropowerpop                  3
+deep tech house                  3
+disco                            3
+uk pop                           3
+melodipop                        3
+classic russian pop              3
+destroy techno                   3
+regional mexican pop             3
+dutch trance                     3
+hollywood                        3
+abstract beats                   3
+post-hardcore                    3
+dusseldorf electronic            3
+deep melodic euro house          3
+funk carioca                     3
+jazz organ                       3
+candy pop                        2
+afro dancehall                   2
+contemporary jazz                2
+wisconsin indie                  2
+progressive house                2
+funk rock                        2
+new comedy                       2
+nashville indie                  2
+japanese jazz fusion             2
+dancehall                        2
+dusseldorf indie                 2
+swedish electropop               2
+swedish pop                      2
+arkansas country                 2
+australian pop                   2
+ambient pop                      2
+kawaii future bass               2
+bergen indie                     2
+anthem worship                   2
+etherpop                         2
+deep pop edm                     2
+deep soul house                  2
+r&amp;b                              2
+deep new americana               2
+modern reggae                    2
+christian indie                  2
+indie garage rock                2
+alabama indie                    2
+uk garage                        2
+australian psych                 2
+grupera                          2
+modern alternative rock          2
+dark techno                      2
+wonky                            2
+bath indie                       1
+italian alternative              1
+cologne electronic               1
+bedroom soul                     1
+african gospel                   1
+canadian folk                    1
+jazztronica                      1
+norwegian pop                    1
+experimental jazz                1
+salsa                            1
+country pop                      1
+singaporean electronic           1
+post-disco                       1
+broadway                         1
+electro swing                    1
+chamber psych                    1
+danish indie pop                 1
+ska                              1
+austin americana                 1
+australian alternative pop       1
+modern ska punk                  1
+p funk                           1
+basel indie                      1
+detroit indie                    1
+dark post-punk                   1
+modern blues rock                1
+future house                     1
+cartoon                          1
+comic                            1
+deep uplifting trance            1
+cyberpunk                        1
+dutch edm                        1
+celtic rock                      1
+alternative roots rock           1
+british folk                     1
+swedish house                    1
+old west                         1
+uk contemporary jazz             1
+nova mpb                         1
+otacore                          1
+fluxwork                         1
+acousmatic                       1
+canadian electropop              1
+french baroque                   1
+dub techno                       1
+ann arbor indie                  1
+country                          1
+jawaiian                         1
+modern blues                     1
+french techno                    1
+indie cafe pop                   1
+j-ambient                        1
+cape town indie                  1
+halloween                        1
+nordic soundtrack                1
+detskie pesni                    1
+texas country                    1
+ccm                              1
+dunedin indie                    1
+acoustic pop                     1
+derby indie                      1
+anime                            1
+electra                          1
+laboratorio                      1
+cedm                             1
+indie folk                       1
+deep minimal techno              1
+turntablism                      1
+hamburg electronic               1
+canadian post-hardcore           1
+calgary indie                    1
+israeli pop                      1
+deep funk                        1
+bebop                            1
+dominican indie                  1
+baile pop                        1
+funky tech house                 1
+neapolitan funk                  1
+post-grunge                      1
+classical performance            1
+flamenco                         1
+experimental house               1
+hardcore breaks                  1
+asmr                             1
+kiwi rock                        1
+american post-rock               1
+vapor pop                        1
+canadian indie folk              1
+classic progressive house        1
+devon indie                      1
+j-rock                           1
+classic soundtrack               1
+k-indie                          1
+Name: genres, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Song-analysis">Song analysis<a class="anchor-link" href="#Song-analysis">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Now let's take a look at my favorite songs in a similar fashion.  Similar to before, I can define a simple function to get the time series for a given song.</p>
 
 </div>
@@ -38403,33 +41324,39 @@ L 425.889063 98.948281
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert to index.html with cmd line</span>
-<span class="o">!</span>jupyter nbconvert to_publish.ipynb --to html --output index.html
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[NbConvertApp] Converting notebook to_publish.ipynb to html
-[NbConvertApp] Writing 1093111 bytes to index.html
-</pre>
+    </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -38889,8 +41816,8 @@ L 425.889063 98.948281
 <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">((</span><span class="n">merged</span><span class="o">.</span><span class="n">duration_ms</span><span class="o">/</span><span class="mi">60000</span><span class="p">),</span> <span class="n">hist</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">mean_duration</span> <span class="o">=</span> <span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">duration_ms</span><span class="o">/</span><span class="mi">60000</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">mean_duration</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">)</span>
-<span class="c1"># plt.show()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean duration:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_duration</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;min&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Duration (min)&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean duration @&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_duration</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;min&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -45571,6 +48498,441 @@ z
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Looking-at-Genre-Patterns">Looking at Genre Patterns<a class="anchor-link" href="#Looking-at-Genre-Patterns">&#182;</a></h1><p>Another bit of data that Spotify provides is the top genres that each artist can be attributed to.  Using this, I can take a look at trends in my listening pertaining to genre.</p>
+<p>(Spotify doesnt list genres for individual songs or albums, only artists as a whole -- this will yield a less-than-ideal analysis, but still potentially interesting nonetheless)</p>
+<p>Using scraping methods similar to before, I gathered the genre data via Spotify API and saved to json.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in spotify features from scraping json output</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s2">&quot;scraping/output/genres/completed.json&quot;</span><span class="p">,</span> <span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">genres</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>genres</th>
+    </tr>
+    <tr>
+      <th>artist</th>
+      <th>song</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>!!!</th>
+      <th>Even When the Water's Cold</th>
+      <td>alternative dance</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">$uicideboy$</th>
+      <th>#1 STUNNA</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>2ND HAND</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>AM / PM</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>Champion Of Death</th>
+      <td>dark trap</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>vinne</th>
+      <th>By My Side</th>
+      <td>brazilian edm</td>
+    </tr>
+    <tr>
+      <th>walk.</th>
+      <th>seagull.</th>
+      <td>pop</td>
+    </tr>
+    <tr>
+      <th>wasiu</th>
+      <th>Cigarettes &amp; Poutine</th>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>yuzu blur</th>
+      <th>Sky Blush</th>
+      <td>lo-fi beats</td>
+    </tr>
+    <tr>
+      <th>âme</th>
+      <th>No War - Rampa Remix</th>
+      <td>modern rock</td>
+    </tr>
+  </tbody>
+</table>
+<p>6608 rows × 1 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">genres</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;artist&#39;</span><span class="p">,</span> <span class="s1">&#39;song&#39;</span><span class="p">],</span> <span class="n">right_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>artist</th>
+      <th>album</th>
+      <th>song</th>
+      <th>datetime</th>
+      <th>genres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Best I Ever Had</td>
+      <td>2020-05-20 01:08:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Thank Me Now</td>
+      <td>2020-05-20 01:03:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Find Your Love</td>
+      <td>2020-05-20 00:59:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Cece's Interlude</td>
+      <td>2020-05-20 00:57:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Drake</td>
+      <td>Thank Me Later (Int'l Version)</td>
+      <td>Miss Me</td>
+      <td>2020-05-20 00:52:00-04:00</td>
+      <td>canadian hip hop</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>57131</th>
+      <td>Madeintyo</td>
+      <td>Thank You Mr. Tokyo</td>
+      <td>Time Of Her Life</td>
+      <td>2017-07-04 15:26:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+    <tr>
+      <th>57132</th>
+      <td>DJ Khaled</td>
+      <td>Grateful</td>
+      <td>Iced Out My Arms</td>
+      <td>2017-07-04 15:23:00-04:00</td>
+      <td>dance pop</td>
+    </tr>
+    <tr>
+      <th>57133</th>
+      <td>Young Thug</td>
+      <td>Beautiful Thugger Girls</td>
+      <td>Daddy's Birthday</td>
+      <td>2017-07-01 17:33:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+    <tr>
+      <th>57134</th>
+      <td>Lil Wayne</td>
+      <td>Tha Carter IV (Deluxe)</td>
+      <td>How to Love</td>
+      <td>2017-06-29 23:39:00-04:00</td>
+      <td>hip hop</td>
+    </tr>
+    <tr>
+      <th>57135</th>
+      <td>2 Chainz</td>
+      <td>Pretty Girls Like Trap Music</td>
+      <td>It's A Vibe</td>
+      <td>2017-06-29 23:34:00-04:00</td>
+      <td>atl hip hop</td>
+    </tr>
+  </tbody>
+</table>
+<p>57136 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At a first glance, the genres look rather specific to each artist (i.e. Drake being 'canadian hip hop', rather than 'hip hop').  Lets take a look at the distribution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>atl hip hop          10058
+canadian hip hop      4787
+hip hop               4601
+chicago rap           2872
+melodic rap           2707
+conscious hip hop     1822
+dance pop             1655
+rap                   1548
+big room              1392
+edm                   1301
+Name: genres, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One thing we can do is to recode any genre to 'Hip Hop / Rap' if the genre string contains 'hip hop' or 'rap' in any capacity</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_genres</span><span class="o">.</span><span class="n">genres</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;hip hop|rap&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True     36500
+False    17510
+Name: genres, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert to index.html with cmd line</span>
+<span class="o">!</span>jupyter nbconvert to_publish.ipynb --to html --output index.html
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] Converting notebook to_publish.ipynb to html
+[NbConvertApp] Writing 1323717 bytes to index.html
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
