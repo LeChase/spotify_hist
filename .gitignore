@@ -1,7 +1,7 @@
-\test_env
-\.ipynb_checkpoints
-\__pycache__
-\scraping\keys.py
+test_env/
+.ipynb_checkpoints/
+__pycache__/
+scraping/keys.py
 .vscode
 *.json
 *.csv
