@@ -12,13 +12,13 @@ from scraping.spotify import Spotify
 
 def main():
 
-    # # get lyrics
-    # lyric_scraper = Scraper('lyrics', Lyrics, Lyrics.find_lyrics)
-    # lyric_scraper.main()
+    # get lyrics
+    lyric_scraper = Scraper('lyrics', Lyrics, Lyrics.find_lyrics)
+    lyric_scraper.main()
 
-    # # get spotify features 
-    # spotify_scraper = Scraper('spotify', Spotify, Spotify.get_features)
-    # spotify_scraper.main()
+    # get spotify features 
+    spotify_scraper = Scraper('spotify', Spotify, Spotify.get_features)
+    spotify_scraper.main()
 
     # get genres
     genre_scraper = Scraper('genres', Spotify, Spotify.get_genres)
